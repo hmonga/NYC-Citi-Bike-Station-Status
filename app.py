@@ -78,7 +78,7 @@ st.caption(
 
 with st.sidebar:
     st.header("Controls")
-    if st.button("🔄 Refresh data", width='stretch'):
+    if st.button("🔄 Refresh data"):
         refresh_data()
 
     st.subheader("Filters")
