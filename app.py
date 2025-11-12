@@ -333,5 +333,4 @@ with st.expander("Station details"):
     table_df = filtered_stations[available_columns].copy()
     st.dataframe(
         table_df.sort_values("num_bikes_available", ascending=False),
-        width='stretch',
     )
