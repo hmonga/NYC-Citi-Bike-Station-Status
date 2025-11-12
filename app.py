@@ -78,7 +78,7 @@ st.caption(
 
 with st.sidebar:
     st.header("Controls")
-    if st.button("🔄 Refresh data", use_container_width=True):
+    if st.button("🔄 Refresh data", width='stretch'):
         refresh_data()
 
     st.subheader("Filters")
@@ -281,7 +281,7 @@ def build_map(df):
             opacity=0.7,
         ).add_to(m)
 
-    return st_folium(m, height=600, use_container_width=True)
+    return st_folium(m, height=600, width='stretch')
 
 
 map_container = st.container()
@@ -333,5 +333,5 @@ with st.expander("Station details"):
     table_df = filtered_stations[available_columns].copy()
     st.dataframe(
         table_df.sort_values("num_bikes_available", ascending=False),
-        use_container_width=True,
+        width='stretch',
     )
